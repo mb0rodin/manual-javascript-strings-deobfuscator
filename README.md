@@ -12,6 +12,6 @@
 - [ ] ....
 
 # Credits
-codemirror - [codemirror5](hhttps://github.com/codemirror/codemirror5)
+codemirror - [codemirror5](https://github.com/codemirror/codemirror5)
 
 atakde - [online-code-editor](https://github.com/atakde/online-code-editor)
