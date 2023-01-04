@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.boxes {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  border-left: 1px solid #ccc;
+}
+
+
+.editor-container .CodeMirror {
+  flex-grow: 1;
+  height: 90%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.editor-header {
+  padding: 0 10px;
+  height: 100%;
+}
+
+.log-header {
+  padding: 0 10px;
+  height: 100%;
+}
+
+.log-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-left: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.log-textarea {
+  flex-grow: 1;
+  height: 90%;
+  width: 100%;
+}
+
+.button-container {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+}
+
+.button-container>button {
+  margin-right: 10px;
+}
+
+
+

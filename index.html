@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Manual Javascript strings deobfuscator</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+  </header>
+  <main>
+    <div class="button-container">
+      <button id="add">ADD TO CONTEXT</button>
+      <button id="eval">EVAL FROM CONTEXT</button>
+      <button id="clear">CLEAR</button>
+    </div>
+    <section class="boxes">
+
+      <div class="editor-container">
+        <div class="editor-header">
+          <h1>JS</h1>
+          <textarea data-js></textarea>
+        </div>
+      </div>
+      <div class="log-container">
+        <div class="log-header">
+          <h1>LOG</h1>
+          <textarea data-log class="log-textarea"></textarea>
+        </div>
+      </div>
+
+    </section>
+   
+  </main>
+  <footer>
+  </footer>
+</body>
+
+</html>
