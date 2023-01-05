@@ -91,9 +91,10 @@ evalButtonEl.addEventListener("click", () => {
   let result = evalInContext(PRIVATE_CONTEXT, selectionText);
   addToLog(selectionText + " => " + result);
   addToLog("typeof " + result + " => " + typeof result);
+  if(result == "[error]") return;
   if(typeof result == "string") result = `"${result}"`
    
-  if(result != "[error]") jsEditor.replaceSelection(result.toString());
+  jsEditor.replaceSelection(result.toString());
   
 });
 
