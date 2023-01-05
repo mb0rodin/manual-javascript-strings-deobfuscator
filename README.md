@@ -1,5 +1,5 @@
 # Online javascript strings deobfuscator
-
+### How to use: [WIKI](https://github.com/mb0rodin/manual-javascript-strings-deobfuscator/wiki)
 ![](./images/1.gif)
 
 # Safety
