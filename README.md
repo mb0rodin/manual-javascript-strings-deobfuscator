@@ -2,19 +2,19 @@
 
 ![](./images/1.gif)
 
-# It is not safe! 
-![](./images/2.gif)
+# Safety
 
+## Not so bad but still not safe. 
+![](./images/3.gif)
 # TODO
-- [ ] Make it safe
+- [X] beautifier
+- [X] Make it safe
+- [ ] Make it more safety
 - [ ] Make functions list
 - [ ] Make authimatic funtions finder
-- [X] beautifier
 - [ ] ....
 
 # Credits
-codemirror - [codemirror5](https://github.com/codemirror/codemirror5)
-
-atakde - [online-code-editor](https://github.com/atakde/online-code-editor)
-
-beautifier - [js-beautify](https://github.com/beautify-web/js-beautify)
+ - codemirror - [codemirror5](https://github.com/codemirror/codemirror5)
+ - atakde - [online-code-editor](https://github.com/atakde/online-code-editor)
+ - beautifier - [js-beautify](https://github.com/beautify-web/js-beautify)
