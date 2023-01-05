@@ -19,8 +19,11 @@ const jsEditor = CodeMirror.fromTextArea(jsCodeEl, {
   mode: "javascript",
 });
 
-var PRIVATE_CONTEXT = {};
-var CONTEXT_CODE = "";
+let PRIVATE_CONTEXT = {};
+for (p in this)
+  PRIVATE_CONTEXT[p] = undefined;
+
+let CONTEXT_CODE = "";
 
 for (const editor of [jsEditor]) {
   editor.on("blur", (codeMirror) => {
@@ -34,11 +37,13 @@ function addToLog(text){
 
 function evalInContext(context, js) {
   try {
-    with(context) { 
-      var result = eval(CONTEXT_CODE + js); 
-      addToLog('DONE!');
-      return result;
-    };
+    let result = null;
+    with(context) {
+      result = eval(CONTEXT_CODE + js); 
+    }
+    addToLog('DONE!');
+    return result;
+    
   } catch (error) {
     addToLog("ERROR: " + error);
     return "[error]"; 
@@ -46,8 +51,8 @@ function evalInContext(context, js) {
 }
 
 addButtonEl.addEventListener("click", () => {
-  var selectionText = jsEditor.getSelection().toString();
-  var result = evalInContext(PRIVATE_CONTEXT, selectionText);
+  let selectionText = jsEditor.getSelection().toString();
+  let result = evalInContext(PRIVATE_CONTEXT, selectionText);
   if(result != "[error]") {
     jsEditor.replaceSelection("");
     CONTEXT_CODE += selectionText + "\r\n";
@@ -56,8 +61,8 @@ addButtonEl.addEventListener("click", () => {
 });
 
 evalButtonEl.addEventListener("click", () => {
-  var selectionText = jsEditor.getSelection().toString();
-  var result = evalInContext(PRIVATE_CONTEXT, selectionText);
+  let selectionText = jsEditor.getSelection().toString();
+  let result = evalInContext(PRIVATE_CONTEXT, selectionText);
   addToLog(selectionText + " => " + result);
   addToLog("typeof " + result + " => " + typeof result);
   if(typeof result == "string") result = `"${result}"`
